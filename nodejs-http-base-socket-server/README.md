@@ -11,7 +11,7 @@ Assume that this operation requires confirmation by human. It should not be impl
 
 Telnet output:
 
-<code>
+```
 Trying 127.2.213.129...
 Connected to 127.2.213.129.
 Escape character is '^]'.
@@ -21,11 +21,11 @@ DELETE /customers/3
 async oper
 Answer:other operation
 deleted 3
-</code>
+```
 
 Server console output:
 
-<code>
+```
 server started 127.2.213.129 8080
 socket opened
 Data:test
@@ -36,5 +36,5 @@ Data:async oper
 other operation
 [ 'first', 'second', 'third' ]
 [ 'first', 'second' ]
-</code>
+```
 
