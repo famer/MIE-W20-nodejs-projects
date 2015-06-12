@@ -3,7 +3,7 @@
 Implement simple Statefull (All interactions within one session) and Stateless (Information about state is part of communication) server in http://nodejs.org using network module.
 
 Your server should be able to communicate using following commmands:
-
+```
 open - open order
 add - add item
 process - process order
@@ -15,6 +15,9 @@ Example of communication (order of commands is important):
   <--added
   -->process
   <--processed
+  
+```
+
 Do not forget show example of telnet communications.
 
 ## Result
@@ -22,7 +25,7 @@ Do not forget show example of telnet communications.
 ### Statefull
 
 telnet:
-<code>
+```
 Trying 127.6.117.129...
 Connected to 127.6.117.129.
 Escape character is '^]'.
@@ -37,13 +40,13 @@ Answer:added
 process
 Answer:processed blag,health
 Connection closed by foreign host.
-</code>
+```
 
 ### Stateless:
 
 Telnet:
 
-<code>
+```
 Trying 127.6.117.129...
 Connected to 127.6.117.129.
 Escape character is '^]'.
@@ -65,5 +68,5 @@ process 1
 Answer:processed good
 process
 Answer:you must "open" order and "add" items to the order first
-</code>
+```
 
