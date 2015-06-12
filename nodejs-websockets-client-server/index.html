@@ -1,0 +1,12 @@
+<script>
+var conn = new WebSocket('ws://localhost:5000/chat', 'chat');
+conn.onopen = function() {
+	console.log('open');
+	conn.send('data');
+};
+
+conn.onmessage = function(e) {
+	document.write(e.data + "<br />");
+	console.log(e.data);
+};
+</script>
