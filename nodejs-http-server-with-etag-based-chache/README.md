@@ -6,6 +6,7 @@ Design and implement simple service - get list of customers
 
 Example:
 
+```
 GET /customers
 [
     {
@@ -19,12 +20,15 @@ GET /customers
         "orders": []
     }
 ]
+```
+
 Implement HTTP caching using Last-Modified and ETag. Implement two version of ETag: strong and weak ETag. For weak ETag use only the id and the name from each costumer. Do not forget to show examples of communication including all HTTP Headers.
 
 
 ## Result
 
 Console log with example requests:
+
 
 GET /customers/
 
@@ -36,7 +40,7 @@ possible answers:
 
 304 not modified
 
-<code>
+```
 // etag sent back (non if not match were sent in req)
 famer@mie-w20:~/790197 $ curl -i https://mie-w20-c9-famer.c9.io/customers/
 HTTP/1.1 200 OK
@@ -84,5 +88,5 @@ etag: "33b5d56ed4076bde30380fb03162dfe3"
 undefined: proxy_subdomain_proxy-old-gce-usw-01-prod_00
 X-C9-Server: proxy_subdomain_proxy-old-gce-usw-01-prod_00
 
-</code>
+```
 
