@@ -1,5 +1,5 @@
-# NodeJS projects
-Here projects related to Web and based on NodeJS
+# MIE-W20 NodeJS projects
+Here projects related Web 2.0 (MIE-W20) courses provided by [Tomas Vitvar](http://vitvar.com) at [CVUT](http://fit.cvut.cz) mostly based on NodeJS
 
 Includes
 
