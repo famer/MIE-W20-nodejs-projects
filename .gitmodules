@@ -1,0 +1,3 @@
+[submodule "nodejs-mondofiles-socketio"]
+	path = nodejs-mondofiles-socketio
+	url = git@github.com:famer/showtogether.git
