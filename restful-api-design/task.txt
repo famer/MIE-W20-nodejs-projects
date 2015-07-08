@@ -1,0 +1,68 @@
+RESTful API
+
+Model: place ← owner → car → plate.
+
+Considering one owner can have more than one car and service could provide more than car api on one host.
+
+Create
+
+<code>POST /cars/{place}/{owner}/{plate}</code>
+
+Possible status codes:
+<code>
+201 - created (car put to the datastore)
+400 - bad request (wrong data)
+409 - conflict (conflict of putting data)
+</code>
+
+Delete
+
+<code>DELETE /cars/{plate}</code>
+
+Possible status codes:
+
+<code>
+200 - ok (car removed from datastore)
+400 - bad request (wrong data, plate not found)
+</code>
+
+
+Update
+
+Considering one owner can have more than one car
+
+<code>
+PUT /cars/plate/{plate}/{owner} // changing owner by plate
+PUT /cars/owner/{owner}/{place} // changing place by owner
+</code>
+
+Possible status codes:
+
+<code>
+200 - ok (car information updated)
+201 - created (car put to the datastore)
+400 - bad request (wrong data)
+409 - conflict (conflict of putting data)
+</code>
+
+Read
+
+Considering one owner can have more than one car. (One resource should provide filtering using query string parameter)
+
+<code>
+GET /cars/?plate={plate} // returns item by plate
+GET /cars/?owner={owner} // returns items by owner
+GET /cars/?place={place}&perpage={items_per_page}&page={page_number} // returns items by place
+</code>
+
+Possible status codes:
+
+<code>
+200 - ok 
+400 - bad request (wrong data)
+404 - not found
+</code>
+
+
+
+

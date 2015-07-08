@@ -1,0 +1,20 @@
+Task
+
+A company runs an application for cars registration and provides RESTful services to its customers. Resources have a base uri of http://car-registry.org
+
+The data model contains following entities: place ← owner → car → plate.
+
+The services should cover all CRUD operations for each entity/resource.
+
+Instructions
+
+Design view on data model and design and describe URIs of resources (One resource should provide filtering using query string parameter)
+
+Example:
+/orders - orders of products
+/... - ...
+Describe all available operations, method and status codes
+
+/orders - get list of orders
+HTTP method: GET
+Status codes: 200 - ok, 400 - bad request
